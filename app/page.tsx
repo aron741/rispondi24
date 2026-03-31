@@ -258,16 +258,16 @@ export default function LandingPage() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="https://buy.stripe.com/test_link_setup"
+                href="https://buy.stripe.com/eVqcMY3q77P4eOvaqZ7ss01"
                 className="rounded-2xl bg-slate-900 px-6 py-3.5 text-center text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition hover:-translate-y-0.5"
               >
                 Paga il setup
               </a>
               <a
-                href="mailto:info@rispondi24.it"
+                href="https://buy.stripe.com/dRm9AM9Ov6L00XFdDb7ss00"
                 className="rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-center text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
               >
-                Richiedi informazioni
+                Attiva abbonamento mensile
               </a>
             </div>
             <p className="mt-4 text-xs leading-6 text-slate-500">

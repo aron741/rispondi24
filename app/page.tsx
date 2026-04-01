@@ -1,3 +1,5 @@
+import WebVoiceDemo from "@/components/WebVoiceDemo";
+
 export default function LandingPage() {
   const demoNumber = "+1 260 270 1966";
 
@@ -140,6 +142,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <WebVoiceDemo />
 
       <section id="demo" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="grid items-stretch gap-8 lg:grid-cols-[1.02fr_0.98fr]">

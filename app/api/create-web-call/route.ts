@@ -1,12 +1,25 @@
 import { NextResponse } from "next/server";
 import Retell from "retell-sdk";
 
-const client = new Retell({
-  apiKey: process.env.RETELL_API_KEY!,
-});
-
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.RETELL_API_KEY;
+    const agentId = process.env.RETELL_AGENT_ID;
+
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "Missing RETELL_API_KEY" },
+        { status: 500 }
+      );
+    }
+
+    if (!agentId) {
+      return NextResponse.json(
+        { error: "Missing RETELL_AGENT_ID" },
+        { status: 500 }
+      );
+    }
+
     const body = await req.json();
     const { name, email } = body ?? {};
 
@@ -17,8 +30,12 @@ export async function POST(req: Request) {
       );
     }
 
+    const client = new Retell({
+      apiKey,
+    });
+
     const response = await client.call.createWebCall({
-      agent_id: process.env.RETELL_AGENT_ID!,
+      agent_id: agentId,
       metadata: {
         lead_name: name,
         lead_email: email,

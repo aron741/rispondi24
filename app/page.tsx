@@ -55,10 +55,10 @@ export default function LandingPage() {
           <header className="flex items-center justify-between rounded-full border border-white/70 bg-white/70 px-5 py-3 shadow-[0_12px_40px_rgba(15,23,42,0.06)] backdrop-blur-xl">
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-400 text-lg font-bold text-white shadow-lg shadow-sky-200">
-                R
+                D
               </div>
               <div>
-                <p className="text-sm font-semibold tracking-wide text-slate-900">Rispondi24</p>
+                <p className="text-sm font-semibold tracking-wide text-slate-900">Dentariox</p>
                 <p className="text-xs text-slate-500">Assistente AI per studi dentistici</p>
               </div>
             </div>
@@ -304,18 +304,28 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-200 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div>
-            <p className="font-semibold text-slate-800">Rispondi24</p>
-            <p className="mt-1">Assistente telefonico AI per studi dentistici.</p>
-          </div>
-          <div className="flex flex-col gap-2 sm:flex-row sm:gap-6">
-            <a href="mailto:info@rispondi24.it" className="transition hover:text-slate-900">info@rispondi24.it</a>
-            <a href={`tel:${demoNumber.replace(/\s+/g, "")}`} className="transition hover:text-slate-900">{demoNumber}</a>
-          </div>
-        </div>
-      </footer>
+      <footer className="border-t border-slate-200 bg-white/80 backdrop-blur mt-auto">
+  <div className="mx-auto max-w-7xl px-6 py-8 text-center text-sm text-slate-500">
+    <p className="font-semibold text-slate-800">Dentariox</p>
+
+    <div className="mt-3 flex flex-col gap-1 sm:flex-row sm:justify-center sm:gap-6">
+      <a href="mailto:info@dentariox.it" className="hover:text-slate-900">
+        info@dentariox.it
+      </a>
+      <a href={`tel:${demoNumber.replace(/\s+/g, "")}`} className="hover:text-slate-900">
+        {demoNumber}
+      </a>
+    </div>
+
+    <p className="mt-4">
+      © 2026 Dentariox. All rights reserved.
+    </p>
+  </div>
+</footer>
+
     </div>
   );
 }
+
+
+      
